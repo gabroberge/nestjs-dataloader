@@ -26,7 +26,7 @@ npm install --save @gabroberge/nestjs-dataloader
 
 ### NestDataLoader Creation
 
-We start by implementing the `NestDataLoader` interface. This tells `DataLoader` how to load our objects.
+We start by extends the `NestDataLoader` abstract class. This tells `DataLoader` how to load our objects.
 
 ```typescript
 import  DataLoader from 'dataloader';
@@ -35,7 +35,7 @@ import { NestDataLoader } from '@gabroberge/nestjs-dataloader';
 ...
 
 @Injectable()
-export class AccountLoader implements NestDataLoader<string, Account> {
+export class AccountLoader extends NestDataLoader<string, Account> {
   constructor(private readonly accountService: AccountService) { }
 
   generateDataLoader(): DataLoader<string, Account> {
