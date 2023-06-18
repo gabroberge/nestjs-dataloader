@@ -1,5 +1,11 @@
 # @gabroberge/nestjs-dataloader
 
+## 1.1.0
+
+### Minor Changes
+
+- 5d1400f: add dataloader decorator
+
 ## 1.0.0
 
 ### Major Changes
