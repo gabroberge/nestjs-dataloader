@@ -1,5 +1,11 @@
 # @gabroberge/nestjs-dataloader
 
+## 1.2.0
+
+### Minor Changes
+
+- 57a8404: fix decorator metadata not being emitted
+
 ## 1.1.2
 
 ### Patch Changes
