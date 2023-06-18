@@ -1,5 +1,11 @@
 # @gabroberge/nestjs-dataloader
 
+## 1.0.0
+
+### Major Changes
+
+- 6cfb2ae: implemented dataloader library for nestjs
+
 ## 0.0.2
 
 ### Patch Changes
