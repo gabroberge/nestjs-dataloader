@@ -1,5 +1,11 @@
 # @gabroberge/nestjs-dataloader
 
+## 1.1.2
+
+### Patch Changes
+
+- 42e8273: update readme
+
 ## 1.1.1
 
 ### Patch Changes
