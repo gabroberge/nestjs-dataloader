@@ -1,5 +1,11 @@
 # @gabroberge/nestjs-dataloader
 
+## 1.2.1
+
+### Patch Changes
+
+- a62cfc0: fix typings
+
 ## 1.2.0
 
 ### Minor Changes
