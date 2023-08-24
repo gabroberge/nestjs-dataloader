@@ -1,7 +1,7 @@
 import DataLoader from 'dataloader';
 
 export abstract class NestDataLoader<Key extends string | number, Item> {
-	public abstract generateDataLoader(): DataLoader<Key, Item>;
+	public abstract generateDataLoader(): DataLoader<Key, Item | Item[]>;
 
 	public mapFromArrayToArray<KeyStrategy extends (item: Item) => Key>(
 		array: Item[],
