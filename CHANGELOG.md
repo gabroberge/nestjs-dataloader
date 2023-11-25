@@ -1,5 +1,12 @@
 # @gabroberge/nestjs-dataloader
 
+## 1.3.0
+
+### Minor Changes
+
+- 88b1d6a: fix workflows
+- 88b1d6a: upgrade dependencies
+
 ## 1.2.1
 
 ### Patch Changes
