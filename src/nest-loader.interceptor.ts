@@ -9,9 +9,9 @@ import { GqlExecutionContext } from '@nestjs/graphql';
 import type DataLoader from 'dataloader';
 import type { Observable } from 'rxjs';
 
-import { InjectionContext } from './types';
 import { NEST_LOADER_CONTEXT_KEY } from './constants';
 import { NestDataLoader } from './nest-dataloader';
+import { InjectionContext } from './types';
 
 @Injectable()
 export class NestDataLoaderInterceptor implements NestInterceptor {
@@ -39,15 +39,17 @@ export class NestDataLoaderInterceptor implements NestInterceptor {
 		type: string,
 	): Promise<DataLoader<any, any>> {
 		if (injectionContext[type] === undefined) {
-			const nestLoader = await this.moduleRef.resolve<NestDataLoader<any, any>>(
-				type,
-				injectionContext[NEST_LOADER_CONTEXT_KEY]?.contextId,
-				{
-					strict: false,
-				},
-			);
-
-			injectionContext[type] = nestLoader.generateDataLoader();
+			await this.moduleRef
+				.resolve<NestDataLoader<any, any>>(
+					type,
+					injectionContext[NEST_LOADER_CONTEXT_KEY]?.contextId,
+					{
+						strict: false,
+					},
+				)
+				.then(nestLoader => {
+					injectionContext[type] = nestLoader.generateDataLoader();
+				});
 		}
 
 		return injectionContext[type] as DataLoader<any, any>;
