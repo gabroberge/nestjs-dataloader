@@ -1,5 +1,11 @@
 # @gabroberge/nestjs-dataloader
 
+## 1.3.1
+
+### Patch Changes
+
+- dce19ad: fix issue with dataloader being generated twice
+
 ## 1.3.0
 
 ### Minor Changes
