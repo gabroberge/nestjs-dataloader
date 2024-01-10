@@ -1,5 +1,11 @@
 # @gabroberge/nestjs-dataloader
 
+## 2.0.0
+
+### Major Changes
+
+- 42bae25: remove mapFromArrayToObject and mapFromArrayToArray functions from NestDataLoader
+
 ## 1.3.1
 
 ### Patch Changes
