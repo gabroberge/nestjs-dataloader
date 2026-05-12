@@ -8,9 +8,6 @@
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "paths": {
-      "~/*": ["./src/*"]
-    },
     "skipLibCheck": true
   }
 }

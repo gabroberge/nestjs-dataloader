@@ -1,7 +1,7 @@
 import DataLoader from 'dataloader';
 import { beforeEach, describe, expect, it } from 'vitest';
 
-import { NestDataLoader } from '~/nest-dataloader';
+import { NestDataLoader } from '../src/nest-dataloader';
 
 type TestObject = {
 	id: string;
