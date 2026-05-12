@@ -4,19 +4,29 @@ on:
     branches:
       - "master"
 concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+# Trusted publishing (OIDC): https://docs.npmjs.com/trusted-publishers
+# Changesets needs write access to push version commits / tags and manage release PRs.
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write
+
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
         with:
           version: 10
       - uses: actions/setup-node@v4
         with:
-          node-version: 22.x
+          node-version: 22.14
           cache: "pnpm"
       - run: pnpm install --frozen-lockfile
+      - name: Use npm with OIDC trusted publishing support
+        run: npm install -g 'npm@^11.5.1'
       - name: Create Release Pull Request or Publish
         id: changesets
         uses: changesets/action@v1
@@ -24,4 +34,3 @@ jobs:
           publish: pnpm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
