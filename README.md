@@ -4,10 +4,10 @@ NestJS dataloader simplifies adding [graphql/dataloader](https://github.com/grap
 
 ## Installation
 
-Install with pnpm
+Install with bun
 
 ```bash
-pnpm add @gabroberge/nestjs-dataloader
+bun add @gabroberge/nestjs-dataloader
 ```
 
 Install with yarn
