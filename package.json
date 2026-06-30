@@ -51,7 +51,7 @@
     "@nestjs/core": "^11.1.27",
     "@nestjs/graphql": "^13.4.2",
     "@nestjs/testing": "^11.1.27",
-    "@types/node": "^25.9.3",
+    "@types/node": "^26.0.1",
     "dataloader": "^2.2.3",
     "husky": "^9.1.7",
     "lint-staged": "^17.0.7",
