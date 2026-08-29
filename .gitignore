@@ -1,2 +1,11 @@
+# Dependencies
 node_modules
+
+# Testing
+coverage
+
+# Turbo
+.turbo
+
+# Build Outputs
 dist

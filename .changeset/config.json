@@ -1,11 +1,17 @@
 {
-	"$schema": "https://unpkg.com/@changesets/config@2.3.0/schema.json",
-	"access": "public",
+	"$schema": "https://unpkg.com/@changesets/config@4.0.0/schema.json",
 	"baseBranch": "master",
-	"changelog": "@changesets/cli/changelog",
+	"access": "public",
+	"format": "auto",
+	"changelog": [
+		"@changesets/changelog-github",
+		{
+			"repo": "gabroberge/nestjs-dataloader"
+		}
+	],
 	"commit": false,
-	"fixed": [],
 	"ignore": [],
+	"fixed": [],
 	"linked": [],
 	"updateInternalDependencies": "patch"
 }

@@ -1,0 +1,27 @@
+{
+	"$schema": "https://turborepo.dev/schema.json",
+	"ui": "tui",
+	"globalDependencies": [
+		".oxfmtrc.json",
+		"bun.lock",
+		"eslint.config.mjs",
+		"package.json",
+		"tsconfig.build.json",
+		"tsconfig.eslint.json",
+		"tsconfig.json",
+		"vitest.config.ts"
+	],
+	"tasks": {
+		"build": {
+			"dependsOn": ["^build"],
+			"inputs": ["$TURBO_DEFAULT$"],
+			"outputs": ["dist/**"]
+		},
+		"lint": {
+			"dependsOn": ["^lint"]
+		},
+		"test": {
+			"dependsOn": ["^test"]
+		}
+	}
+}

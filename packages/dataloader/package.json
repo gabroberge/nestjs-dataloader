@@ -1,0 +1,43 @@
+{
+	"name": "@gabroberge/nestjs-dataloader",
+	"version": "3.0.0",
+	"private": false,
+	"description": "A NestJS decorator for dataloader",
+	"keywords": [
+		"dataloader",
+		"graphql",
+		"nestjs",
+		"typescript"
+	],
+	"homepage": "https://github.com/gabroberge/nestjs-dataloader#readme",
+	"bugs": "https://github.com/gabroberge/nestjs-dataloader/issues",
+	"license": "MIT",
+	"author": "Gabriel Roberge",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/gabroberge/nestjs-dataloader.git"
+	},
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
+	"scripts": {
+		"build": "tsdown",
+		"lint": "eslint \"src/**/*.ts\"",
+		"test": "vitest run"
+	},
+	"devDependencies": {
+		"@nestjs/common": "^12.0.1",
+		"@nestjs/core": "^12.0.1",
+		"@nestjs/graphql": "^14.0.0",
+		"@nestjs/testing": "^12.0.1",
+		"dataloader": "^2.2.3",
+		"rxjs": "^7.8.2"
+	},
+	"peerDependencies": {
+		"@nestjs/common": "^12.0.1",
+		"@nestjs/core": "^12.0.1",
+		"@nestjs/graphql": "^14.0.0",
+		"dataloader": "^2.2.3",
+		"rxjs": "^7.8.2"
+	}
+}
