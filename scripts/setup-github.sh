@@ -81,7 +81,8 @@ gh api --method PUT "repos/${REPO}/actions/permissions/selected-actions" --input
   "verified_allowed": false,
   "patterns_allowed": [
     "oven-sh/setup-bun@*",
-    "changesets/action@*"
+    "changesets/action@*",
+    "changesets/action/*@*"
   ]
 }
 EOF

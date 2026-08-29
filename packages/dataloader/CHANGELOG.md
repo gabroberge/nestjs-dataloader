@@ -1,5 +1,13 @@
 # @gabroberge/nestjs-dataloader
 
+## 12.0.0
+
+### Major Changes
+
+- [#58](https://github.com/gabroberge/nestjs-dataloader/pull/58) [`f1af94d`](https://github.com/gabroberge/nestjs-dataloader/commit/f1af94de346480527bde11dd21a6cea104b2051c) Thanks [@gabroberge](https://github.com/gabroberge)! - Raise peer dependencies to **NestJS 12** (`@nestjs/common`, `@nestjs/core`) and **`@nestjs/graphql` 14**. Applications still on NestJS 11 or `@nestjs/graphql` 13 must upgrade before installing this release.
+
+    The package build was also modernized: the library now ships from a workspace package built with **tsdown** instead of tsup.
+
 ## 3.0.0
 
 ### Major Changes
