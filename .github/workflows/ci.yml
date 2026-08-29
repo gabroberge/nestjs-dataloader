@@ -4,6 +4,7 @@ on:
     push:
         branches:
             - master
+            - dev
     pull_request:
 
 permissions:
@@ -23,9 +24,9 @@ jobs:
               with:
                   bun-version-file: package.json
 
-            # Root devDependencies only — commitlint does not need package workspaces.
+            # Root package only — commitlint does not need apps/* or packages/*.
             - name: Install commitlint dependencies
-              run: HUSKY=0 bun install --frozen-lockfile --filter nestjs-dataloader
+              run: HUSKY=0 bun install --frozen-lockfile --filter ./
 
             - name: Validate current commit (last commit) with commitlint
               if: github.event_name == 'push'
@@ -45,9 +46,9 @@ jobs:
               with:
                   bun-version-file: package.json
 
-            # Root devDependencies only — oxfmt does not need package workspaces.
+            # Root package only — oxfmt does not need apps/* or packages/*.
             - name: Install oxfmt dependencies
-              run: HUSKY=0 bun install --frozen-lockfile --filter nestjs-dataloader
+              run: HUSKY=0 bun install --frozen-lockfile --filter ./
 
             - name: Oxfmt
               run: bun run format:check

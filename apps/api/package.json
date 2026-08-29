@@ -1,0 +1,42 @@
+{
+	"name": "api",
+	"version": "0.0.1",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "nest build",
+		"start": "nest start",
+		"start:dev": "nest start --watch",
+		"start:debug": "nest start --debug --watch",
+		"start:prod": "node dist/main",
+		"lint": "eslint \"src/**/*.ts\" \"test/**/*.ts\"",
+		"test": "vitest run && bun run test:e2e",
+		"test:watch": "vitest",
+		"test:cov": "vitest run --coverage",
+		"test:debug": "vitest --inspect-brk --no-file-parallelism",
+		"test:e2e": "vitest run --config ./vitest.config.e2e.ts"
+	},
+	"dependencies": {
+		"@apollo/server": "^5.5.1",
+		"@as-integrations/express5": "^1.1.2",
+		"@gabroberge/nestjs-dataloader": "workspace:*",
+		"@nestjs/apollo": "^14",
+		"@nestjs/common": "^12.0.1",
+		"@nestjs/core": "^12.0.1",
+		"@nestjs/graphql": "^14",
+		"dataloader": "^2.2.3",
+		"graphql": "^16",
+		"reflect-metadata": "^0.2.2",
+		"rxjs": "^7.8.1"
+	},
+	"devDependencies": {
+		"@nestjs/cli": "^12.0.0",
+		"@nestjs/schematics": "^12.0.0",
+		"@nestjs/testing": "^12.0.1",
+		"@types/supertest": "^7.0.0",
+		"arktype": "^2.2.3",
+		"source-map-support": "^0.5.21",
+		"supertest": "^7.0.0",
+		"typescript": "^6.0.2"
+	}
+}
