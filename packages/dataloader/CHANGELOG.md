@@ -1,6 +1,6 @@
 # @gabroberge/nestjs-dataloader
 
-## 4.0.0
+## 12.0.0
 
 ### Major Changes
 
