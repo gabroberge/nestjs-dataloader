@@ -6,6 +6,9 @@
 		"rootDir": "."
 	},
 	"include": [
+		"apps/*/src/**/*.ts",
+		"apps/*/test/**/*.ts",
+		"apps/*/vitest.config.ts",
 		"packages/*/src/**/*.ts",
 		"packages/*/tsdown.config.ts",
 		"packages/*/vitest.config.ts",

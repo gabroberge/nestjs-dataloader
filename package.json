@@ -2,6 +2,7 @@
 	"name": "nestjs-dataloader",
 	"private": true,
 	"workspaces": [
+		"apps/*",
 		"packages/*"
 	],
 	"type": "module",
@@ -11,6 +12,7 @@
 		"format:check": "oxfmt --check",
 		"lint": "turbo run lint",
 		"prepare": "husky",
+		"start:dev": "turbo run start:dev",
 		"test": "turbo run test",
 		"typecheck": "tsc -b tsconfig.build.json"
 	},
