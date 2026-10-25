@@ -1,4 +1,5 @@
 import type { INestApplication } from "@nestjs/common";
+import { ExpressAdapter } from "@nestjs/platform-express";
 import { Test } from "@nestjs/testing";
 import type { App } from "supertest/types.js";
 
@@ -9,7 +10,7 @@ export async function createTestApp(): Promise<INestApplication<App>> {
 		imports: [AppModule]
 	}).compile();
 
-	const app = module.createNestApplication();
+	const app = module.createNestApplication(new ExpressAdapter());
 	await app.init();
 	return app;
 }
